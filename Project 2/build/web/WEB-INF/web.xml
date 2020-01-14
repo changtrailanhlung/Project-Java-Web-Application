@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>controller.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateBlogPostServlet</servlet-name>
+        <servlet-class>controller.CreateBlogPostServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoadMainPageServlet</servlet-name>
+        <servlet-class>controller.LoadMainPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/ControllerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateBlogPostServlet</servlet-name>
+        <url-pattern>/CreateBlogPostServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadMainPageServlet</servlet-name>
+        <url-pattern>/LoadMainPageServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>
+            welcome.jsp
+        </welcome-file>
+    </welcome-file-list>
+</web-app>
